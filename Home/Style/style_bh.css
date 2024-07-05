@@ -1,0 +1,606 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: system-ui;
+  color: #140C06;
+}
+
+.main {
+    display: flex;
+    margin-top: 3%;
+}
+
+nav {
+  background-color: #140C06;
+  position: relative;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0px 10px #140C06;
+}
+
+.logo {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 100%;
+  padding-left: 3%;
+  color: #f2f2f2;
+  text-shadow: -2px 0 5px #BEA48B, 2px 0 5px #BEA48B;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #f2f2f2;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a:hover {
+    font-weight: bold;
+    color: #BEA48B;
+}
+
+.sidebar-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    background-color: #140C06;
+    color: #f2f2f2;
+    text-align: left;
+    cursor: pointer;
+}
+
+.sidebar-btn:hover {
+    color: #BEA48B;
+    background-color: #333;
+}
+
+.btn-room {
+    width: 8rem;
+}
+
+.btn-room:hover {
+  font-weight: bold;
+}
+
+.owner-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: #f2f2f2;
+    padding-top: 15%;
+    padding-bottom: 8%;
+    background-color: #140C06;
+}
+
+.space {
+    background-color: #140C06;
+    flex: 1;
+}
+
+.sidebar a {
+    background-color: #140C06;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 5%;
+    text-decoration: none;
+}
+
+.owner-profile p {
+    font-size: 10;
+}
+
+.profile {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border: 5px solid #140C06;
+}
+
+#profile_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-content {
+    margin-left: 200px;
+    padding: 2%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.success-message {
+    background-color: #45331D;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    position: fixed;
+    width: 100%;
+}
+
+.error-message {
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    position: fixed;
+    width: 100%;
+}
+
+.close-btn {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Form */
+
+.bh-form h3 {
+    text-align: center;
+    padding: 1%;
+    padding-top: 0;
+}
+
+.bh-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.textbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.textbox label {
+    font-size: 120%;
+}
+
+.textbox input {
+    font-size: 100%;
+    padding: 1%;
+    border: 2px solid #140C06;
+    box-shadow: 0 2px 4px #140C06;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: 2%;
+}
+
+.textbox textarea {
+    font-size: 100%;
+    padding: 1%;
+    border: 2px solid #140C06;
+    box-shadow: 0 2px 4px #140C06;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: 2%;
+}
+
+form .textbox textarea{
+    width: 90%;
+    font-size: 130%;
+}
+
+#charCount {
+    font-size: 12px;
+    color: #666;
+}
+
+#charCount.max {
+    color: red;
+}
+
+.bh-form .button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    margin-top: 2%;
+}
+
+.bh-form .button input {
+    font-size: 120%;
+    padding: 10px 20px;
+    background-color:#BEA48B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #45331D;
+}
+
+.bh-form .button input:hover {
+    background-color: #45331D;
+    color: #BEA48B;
+}
+
+.textbox .how-link {
+    text-align: center;
+    padding: 1%;
+}
+
+.textbox a {
+    text-decoration: none;
+    color: #140C06;
+    font-style: italic;
+}
+
+.textbox a:hover {
+    font-weight: bold;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tutorial-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+}
+
+.tutorial-modal-content {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 50%;
+}
+
+.tutorial-modal-content h2 {
+    text-align: center;
+    padding: 1%;
+}
+
+.tutorial-modal-content ol, li {
+    padding: 2%;
+    font-weight: 500;
+}
+
+.tutorial-modal-content p {
+    padding: 2%;
+    font-weight: 500;
+}
+
+/* Content */
+
+.bhName {
+    text-align: center;
+    border: 3px solid #140C06;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+}
+
+.bhName h1 {
+    flex: 1;
+}
+
+.bhName i {
+    font-size: larger;
+}
+
+#bh_image {
+    display: block;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 300px;
+    height: 360px;
+    object-fit: cover;
+}
+
+.bhInfo {
+    display: flex;
+}
+
+.la-in-con {
+    display: flex;
+    flex: 1;
+    padding: 2%;
+    margin: 1%;
+    border: 1px solid #140C06;
+    flex-direction: column;
+}
+
+.label {
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.label label, .info p {
+    padding: 0.5rem;
+    font-size: large;
+    font-weight: 500;
+}
+
+.info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.info p {
+    font-weight: bold;
+}
+
+.info .button {
+    padding: 0.5rem;
+}
+
+.info .button button {
+    font-size: 0.9rem;
+}
+
+.info .button button:hover {
+    font-weight: bold;
+}
+
+.description {
+    border: 1px solid #140C06;
+    margin-left: 5%;
+    padding: 1%;
+    font-weight: 500;
+}
+
+.gmap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.gmap p {
+    padding: 2%;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.gmap .map {
+    margin: 2%;
+    border: 3px solid #140C06;
+}
+
+/* Edit */
+
+.bh-edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+}
+
+.bh-edit h3 {
+    text-align: center;
+    padding: 1%;
+}
+
+.bh-edit .bh-edit-content .textbox label {
+    font-weight: bold;
+}
+
+.bh-edit-content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.bh-edit-content .button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    margin-top: 2%;
+}
+
+.bh-edit-content .button input {
+    font-size: 120%;
+    padding: 10px 20px;
+    background-color:#BEA48B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #45331D;
+}
+
+.bh-edit-content .button input:hover {
+    background-color: #45331D;
+    color: #BEA48B;
+}
+
+/* BH_image */
+
+.bhimage-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+}
+
+.bhimage-modal-content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#bh_image_modal {
+    width: 20rem;
+    height: 20rem;
+    object-fit:contain;
+    padding: 2%;
+    border: 2px solid #140C06;
+    margin-top: 2%;
+}
+
+.bhimage-modal-content h3 {
+    text-align: center;
+}
+
+.btn-change-image {
+    padding: 1%;
+    font-weight: bold;
+}
+
+.btn-change-image:hover {
+    color: #333;
+} 
+
+.bhimage-modal-content .button-con {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5%;
+}
+
+.bhimage-modal-content .button-con button {
+    padding: 10px 20px;
+    background-color:#BEA48B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #45331D;
+}
+
+.bhimage-modal-content .button-con button:hover {
+    background-color: #45331D;
+    color: #BEA48B;
+}
+
+/* License Image Modal */
+.btn-view-license {
+    cursor: pointer;
+    width: 6rem;
+}
+
+.license-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+}
+
+.license-modal-content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#license_image_modal {
+    width: 20rem;
+    height: 80%;
+    object-fit: contain;
+    padding: 2%;
+    border: 2px solid #140C06;
+    margin-top: 2%;
+}
+
+.license-modal-content h3 {
+    text-align: center;
+}
+
+.btn-change-license-image {
+    padding: 1%;
+    font-weight: bold;
+}
+
+.btn-change-license-image:hover {
+    color: #333;
+}
+
+.license-modal-content .button-con {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5%;
+}
+
+.license-modal-content .button-con button {
+    padding: 10px 20px;
+    background-color: #BEA48B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #45331D;
+}
+
+.license-modal-content .button-con button:hover {
+    background-color: #45331D;
+    color: #BEA48B;
+}
+
+footer {
+    text-align: center;
+    color: #888;
+    padding: 1%;
+  }

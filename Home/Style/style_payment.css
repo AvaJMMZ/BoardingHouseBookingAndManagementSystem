@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: system-ui;
+  color: #140C06;
+}
+
+.main {
+    display: flex;
+    margin-top: 1%;
+}
+
+.main-content {
+    margin-left: 200px;
+    padding: 2%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main-content h2 {
+    text-align: center;
+    margin: 1rem;
+}
+
+nav {
+  background-color: #140C06;
+  position: relative;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0px 10px #140C06;
+}
+
+.logo {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 100%;
+  padding-left: 3%;
+  color: #f2f2f2;
+  text-shadow: -2px 0 5px #BEA48B, 2px 0 5px #BEA48B;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #f2f2f2;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a:hover {
+    font-weight: bold;
+    color: #BEA48B;
+}
+
+.sidebar-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    background-color: #140C06;
+    color: #f2f2f2;
+    text-align: left;
+    cursor: pointer;
+}
+
+.sidebar-btn:hover {
+    color: #BEA48B;
+    background-color: #333;
+}
+
+.owner-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: #f2f2f2;
+    padding-top: 15%;
+    padding-bottom: 8%;
+    background-color: #140C06;
+}
+
+.space {
+    background-color: #140C06;
+    flex: 1;
+}
+
+.sidebar a {
+    background-color: #140C06;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 5%;
+    text-decoration: none;
+}
+
+.owner-profile p {
+    font-size: 10;
+}
+
+.profile {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border: 5px solid #140C06;
+}
+
+#profile_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Main Content */
+
+.tenant-info {
+    display:flex;
+}
+
+.tenant-img-con {
+    display: flex;
+    border: 0.2rem solid #140C06;
+    width: 40%;
+}
+
+.tenant-img-con .name {
+    margin: auto 0;
+}
+
+.tenant-img-con .name p {
+    padding-left: 1rem;
+}
+
+.tenant-img {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.tenant-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tenant-data {
+    display: flex;
+    text-transform: capitalize;
+    padding: 0.5rem;
+    width: 40%; 
+    border-top: 0.2rem solid #140C06;
+    border-bottom: 0.2rem solid #140C06;
+}
+
+.tenant-data .label {
+    margin-right: 2rem;
+    min-width: max-content;
+}
+
+.tenant-data .label p, .data  p{
+    padding: 0.1rem 0 0.1rem 0;
+}
+
+.room-info {
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+    padding: 0.5rem;
+    width: 40%; 
+    border: 0.2rem solid #140C06;
+}
+
+.room-info h4 {
+    text-align: center;
+}
+
+.room-info .label {
+    margin-right: 3rem;
+    min-width: max-content;
+}
+
+.room-info .label p, .data  p{
+    padding: 0.1rem 0 0.1rem 0;
+}
+
+/* Payment */
+
+.payment-details table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse; 
+    border: 1px solid #140C06; 
+}
+
+.payment-details table th,
+.payment-details table td {
+    padding: 10px; 
+    border: 1px solid #140C06; 
+    text-transform: capitalize;
+}
+
+.payment-details table th {
+    background-color: #140C06; 
+    color: white;
+}
+
+.payment-details table tr:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+
+.payment-details table td .action {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.payment-details table td .action button {
+    padding: 0.2rem;
+    color: #140C06;
+    font-size: 15px;
+    cursor: pointer;
+    
+}
+
+.payment-details table td .action button:hover {
+    color: #f2f2f2;
+    background-color: #140C06;
+}
+
+.add-payment-con {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding: 0.5rem;
+}
+
+.add-payment-con button {
+    padding: 0.2rem;
+    width: 10rem;
+    cursor: pointer;
+}
+
+.add-payment-con button:hover {
+    background-color: #140C06;
+    color: #BEA48B;
+    font-weight: bold;
+}
+
+.msg-nopayment {
+    background-color: #888484;
+    text-align: center;
+    padding: 1rem;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1000;
+    pointer-events: none;
+}
+
+#addPaymentForm {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    width: 30%;
+    text-align: center;
+}
+
+#addPaymentForm h2 {
+    margin-bottom: 10px;
+}
+
+#addPaymentForm form {
+    text-align: center;
+}
+
+#addPaymentForm label {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+#addPaymentForm .textbox {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#addPaymentForm .textbox input, select {
+    padding: 10px 10px 10px 10px;
+}
+
+#addPaymentForm .input-with-icon {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#addPaymentForm .input-with-icon i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    pointer-events: none;
+}
+
+#addPaymentForm .input-with-icon input {
+    padding: 10px 10px 10px 40px;
+}
+
+#addPaymentForm .btns {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#addPaymentForm button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    color: #888;
+    padding: 1%;
+}

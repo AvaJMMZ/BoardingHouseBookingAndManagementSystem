@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* outline: 1px solid red; */
+}
+
+body {
+    font-family: system-ui;
+    background-image: url('../images/back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+nav {
+    background-color: #140C06;
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+}
+
+.logo {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 150%;
+  padding-left: 3%;
+  padding-top: 1%;
+  color: #f2f2f2;
+  text-shadow: -2px 0 5px #BEA48B, 2px 0 5px #BEA48B;
+}
+
+.home {
+    flex: 1;
+    text-align: center;
+    font-size: 150%;
+    padding-right: 12%;
+    padding-top: 4px;
+}
+
+.home a i {
+  color: #f2f2f2;
+}
+
+.home a:hover i {
+  color: #BEA48B;
+  font-size: 160%;
+  border: 2px solid #BEA48B;
+  border-radius: 50%;
+  padding: 0.5%;
+}
+
+.form-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+}
+
+.form {
+    background-color: #140C06;
+    padding: 2%;
+    width: fit-content;
+    color: #f2f2f2;
+    background-color: #ffffff05;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 20px;
+    border: 5px solid #BEA48B;
+    box-shadow: 0 2px 4px #140C06;
+}
+
+.form h1 {
+    font-size: 250%;
+}
+
+.alert-messages {
+    color: red;
+    font-weight: bolder;
+}
+
+.user-input {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.textbox {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.textbox i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    pointer-events: none;
+}
+
+.textbox input {
+    width: 80%;
+    padding: 10px 10px 10px 40px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    background-color: transparent;
+    color:#f2f2f2;
+    font-size: 100%;
+}
+
+.textbox input::placeholder {
+    color: #ccc;
+}
+
+.textbox select {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    background-color: transparent;
+    color:#f2f2f2;
+    font-size: 100%;
+}
+
+.textbox select option[value="tenant"] {
+  color: #140C06;
+  font-weight: bold;
+}
+
+.textbox select option[value="landlord"] {
+  color: #140C06;
+  font-weight: bold;
+}
+
+.button {
+    color: #f2f2f2;
+    width: 100%;
+    transition: .5s linear;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 5%;
+    text-align: center;
+    background: transparent;
+    text-decoration: none;
+    font-weight:bold;
+    border: 3px solid #BEA48B;
+}
+
+.button:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.button:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.button:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  color: #BEA48B;
+  background-color: #140C06;
+  border: 3px solid #140C06;
+  cursor: pointer;
+}
+
+.button:hover:before {
+  border-color: #BEA48B;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .3s;
+}
+
+.button:hover:after {
+  border-color: #BEA48B;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .5s;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.login-link {
+    margin-top: 10%;
+}
+
+.login-button {
+    color: #f2f2f2;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.login-button:hover {
+    font-weight: bolder;
+    color: #BEA48B;
+}
+
+/* login form */
+
+.register-link {
+    margin-top: 10%;
+}
+
+.register-button {
+    color: #f2f2f2;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.register-button:hover {
+    font-weight: bolder;
+    color: #BEA48B;
+}
+
+/* payment form */
+
+.back-link {
+  margin-left: 10px;
+  padding: 2px;
+  color: #f2f2f2;
+  font-size: large;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  color: #BEA48B;
+}
+
+.pay-main {
+    display: flex;
+    text-align: center;
+}
+
+.payment-instructions {
+    background-color: #BEA48B;
+    padding: 2%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #140C06;
+}
+
+.instruction-con {
+    margin: 1%;
+}
+
+.ins-con {
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    justify-content: space-around;
+    margin-top: 3%;
+}
+
+.gcash {
+    background-color: #f2f2f2;
+    padding: 2%;
+}
+
+.inperson {
+    background-color: #f2f2f2;
+    padding: 2%;
+}
+
+.upload-receipt {
+    margin-bottom: 10%;
+    text-align: left;
+    font-size: 100%;
+}
+
+/* ALL */
+
+footer {
+  text-align: center;
+  color: #888;
+  padding: 1%;
+}

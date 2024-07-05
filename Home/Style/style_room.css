@@ -1,0 +1,451 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: system-ui;
+  color: #140C06;
+}
+
+.main {
+    display: flex;
+    margin-top: 3%;
+}
+
+nav {
+  background-color: #140C06;
+  position: relative;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0px 10px #140C06;
+}
+
+.logo {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 100%;
+  padding-left: 3%;
+  color: #f2f2f2;
+  text-shadow: -2px 0 5px #BEA48B, 2px 0 5px #BEA48B;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #f2f2f2;
+  padding-top: 2%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar a:hover {
+  font-weight: bold;
+  color: #BEA48B;
+}
+
+.sidebar-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  background-color: #140C06;
+  color: #f2f2f2;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sidebar-btn:hover {
+  color: #BEA48B;
+  background-color: #333;
+}
+
+.owner-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: #f2f2f2;
+  padding-top: 15%;
+  padding-bottom: 8%;
+  background-color: #140C06;
+}
+
+.space {
+  background-color: #140C06;
+  flex: 1;
+}
+
+.sidebar a {
+  background-color: #140C06;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 5%;
+  text-decoration: none;
+}
+
+.owner-profile p {
+  font-size: 10;
+}
+
+.profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border: 5px solid #140C06;
+}
+
+#profile_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-content {
+    margin-left: 200px;
+    padding: 2%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.msg-no-room {
+  padding: auto;
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.success-message {
+    background-color: #45331D;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    position: fixed;
+    width: 100%;
+}
+
+.error-message {
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    position: fixed;
+    width: 100%;
+}
+
+.close-btn {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* No Room */
+.no-room {
+  text-align: center;
+  font-size: 3rem;
+  height: 30rem;
+}
+
+/* Add Room */
+.addroom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+}
+
+.addroom-content {
+  width: 50%;
+  margin-left: 30%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 5%;
+}
+
+.addroom h3 {
+  text-align: center;
+  padding: 1%;
+  padding-top: 0;
+}
+
+.textbox {
+  display: flex;
+  margin: 0.1rem;
+  justify-content: right;
+}
+
+.textbox label {
+  margin-right: 1rem;
+}
+
+.textbox input {
+  height: 1.5rem;
+  width: 4rem;
+  border: 2px solid #140C06;
+  box-shadow: 0 2px 4px #140C06;
+}
+
+.img-input {
+  margin-left: 2rem;
+}
+
+.frm-button {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.frm-button button {
+  margin: 0.1rem;
+  padding: 10px 20px;
+  background-color:#BEA48B;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #45331D;
+}
+
+.frm-button button:hover {
+  background-color: #45331D;
+  color: #BEA48B;
+}
+
+/* Main */
+
+.main-content h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.card-con {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-evenly;
+  padding: 1px;
+}
+
+.room-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  min-width: 100%;
+  background-color:white;
+  box-shadow:  0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2%;
+}
+
+.room-image img {
+  display: block;
+  object-fit: cover;
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+}
+
+.img {
+  position: relative;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.room-image {
+  display: flex;
+  width: 35rem;
+  height: 20rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow:  0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 5%;
+}
+
+.room-info {
+  flex: 1;
+}
+
+.room-image {
+  position: relative;
+}
+
+#add-button {
+  position: fixed;
+  bottom: 50px; 
+  right: 50px; 
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #45331D; 
+  color: #fff; 
+  text-align: center;
+  font-size: 24px; 
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease; 
+}
+
+#add-button:hover {
+  background-color: #140C06;
+}
+
+.num-id {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bolder;
+  flex: 1;
+  padding-left: 5rem;
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 2rem;
+}
+
+.action button {
+  padding: 0.3rem;
+  margin: 0.1rem;
+  cursor: pointer;
+}
+
+.tenant {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-evenly;
+  padding: 1px;
+}
+
+.capsule {
+  background-color: #45331D;
+  border: #140C06;
+  border-radius: 1rem;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+.room-description {
+  min-height: 8rem;
+  margin-left: 2rem;
+  border: 0.2rem solid #140C06;
+  padding: 0.5rem;
+}
+
+.des-label {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+.v-status {
+  color: green;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.o-status {
+  font-weight: bold;
+  color: red;
+  margin-bottom: 1rem;
+}
+
+.tenant-occ {
+  color: black;
+  font-weight: normal;
+}
+
+/* Edit Room */
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+}
+
+.modal-content {
+  width: 50%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+  text-align: center;
+  padding: 1%;
+  padding-top: 0;
+}
+
+.modal button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.modal-content .img-input {
+  width: 50%;
+}
+
+.modal-content .textbox {
+  margin: 1rem;
+}
+
+.modal-content .des-input {
+  margin: 1rem;
+}
+
+footer {
+  text-align: center;
+  color: #888;
+  padding: 1%;
+}

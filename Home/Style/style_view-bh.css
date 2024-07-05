@@ -1,0 +1,402 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: system-ui;
+  color: #140C06;
+}
+
+nav {
+  background-color: #140C06;
+  position: relative;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0px 10px #140C06;
+  justify-content: space-evenly;
+}
+
+nav .profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 0.2rem solid #f2f2f2;
+}
+
+nav button {
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  border: 0.1rem solid #BEA48B;
+  color: #140C06;
+  font-size: 1.5rem;
+  padding: 1%;
+}
+
+.logo {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 100%;
+  padding-left: 3%;
+  color: #f2f2f2;
+  text-shadow: -2px 0 5px #BEA48B, 2px 0 5px #BEA48B;
+}
+
+.profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #140C06;
+}
+
+#welcome_profile_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#profile_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#image_input {
+  display: none;
+}
+
+.main {
+    display: flex;
+    margin-top: 6%;
+    flex-direction: column;
+}
+
+.landlord {
+    background-color: #CECDCE;
+    margin: 1%;
+}
+
+.owner-image {
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover;
+    border-radius: 50%; 
+    border: 2px solid #fff;
+}
+
+.bh-image {
+    width: 30rem;
+    margin: 0 0 0 13%;
+}
+
+.room-con {
+    background-color: #CECDCE;
+    margin: 2%;
+    border: 0.3rem solid #140C06;
+    height: 31rem;
+}
+
+.bh h1 {
+    text-align: center;
+}
+
+.bh-details {
+    background-color: #140C06;
+    color: #f2f2f2;
+    margin: 0 0 0 13%;
+    width: 30rem;
+    padding: 1%;
+}
+
+/* Room */
+
+.room-con h1 {
+  text-align: center;
+}
+
+.card-con {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-evenly;
+  padding: 1px;
+  height: 27rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.room-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: 90%;
+  background-color:white;
+  box-shadow:  0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2%;
+  flex-direction: column;
+}
+
+.room-image img {
+  display: block;
+  object-fit: cover;
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+}
+
+.img {
+  position: relative;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.room-image {
+  display: flex;
+  width: 20rem;
+  height: 15rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow:  0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 5%;
+  position: relative;
+}
+
+.room-info {
+  flex: 1;
+}
+
+#add-button {
+  position: fixed;
+  bottom: 50px; 
+  right: 50px; 
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #45331D; 
+  color: #fff; 
+  text-align: center;
+  font-size: 24px; 
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease; 
+}
+
+#add-button:hover {
+  background-color: #140C06;
+}
+
+.num-id {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  flex: 1;
+}
+
+.tenant {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 2%;
+}
+
+.btn-GTR {
+  width: 7rem;
+  padding: 0.5rem;
+  background-color: #BEA48B;
+  color: #140C06;
+  border: 1% solid#140C06;
+  cursor: pointer;
+}
+
+.btn-GTR:hover {
+  background-color: #140C06;
+  color: #BEA48B;
+  border: 1% solid#BEA48B;
+  font-weight: bold;
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: space-evenly;
+  padding: 2px;
+  margin: auto;
+}
+
+.capsule {
+  background-color: #45331D;
+  border: #140C06;
+  border-radius: 1rem;
+  color: #fff;
+  padding: 0.5rem;
+  height: 2rem;
+  font-size: 0.8rem;
+}
+
+.room-description {
+  min-height: 3rem;
+  margin-left: 2rem;
+  border: 0.2rem solid #140C06;
+  padding: 0.5rem;
+}
+
+.des-label {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+.v-status {
+  color: green;
+  font-weight: bold;
+  text-transform: uppercase;
+  
+}
+
+.o-status {
+  font-weight: bold;
+  color: red;
+  margin-bottom: 1rem;
+}
+
+.tenant-occ {
+  color: black;
+  font-weight: normal;
+}
+
+.image-gallery {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 999;
+  overflow: auto;
+}
+
+.image-gallery img {
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+  max-height: 80%;
+  margin-top: 5%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.gmap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.gmap p {
+  padding: 2%;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.gmap .map {
+  margin: 2%;
+  border: 3px solid #140C06;
+}
+
+/* Get this Room */
+
+.confirmation-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius: 10%;
+}
+
+.confirmation-message {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.confirmation-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.confirmation-buttons button {
+  width: 5rem;
+  padding: 1%;
+  background-color: #BEA48B;
+  color: #140C06;
+  border: 1% solid#140C06;
+  cursor: pointer;
+}
+
+.confirmation-buttons button:hover {
+  background-color: #140C06;
+  color: #BEA48B;
+  border: 1% solid#BEA48B;
+  font-weight: bold;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 900;
+}
+
+.centered-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    color:red;
+    font-weight: bold;
+}
+
+
+footer {
+    text-align: center;
+    color: #888;
+    padding: 1%;
+}
